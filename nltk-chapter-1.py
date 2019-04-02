@@ -121,5 +121,18 @@ text1.collocations()
 #find 10  most common word lengths in a text:
 fdist = FreqDist(len(w) for w in text1)
 fdist
-# FreqDist({3: 50223, 1: 47933, 4: 42345, 2: 38513, 5: 26597, 6: 17111, 7: 14399,
+# FreqDist({3: 50223, 1: 47933, 4: 42
+345, 2: 38513, 5: 26597, 6: 17111, 7: 14399,
 #   8: 9966, 9: 6428, 10: 3528, ...})
+
+# most frequent word length is 3, and that words of length 3 account for roughly 50,000 (or 20%) of the words making up the book
+fdist.most_common()
+# [(3, 50223), (1, 47933), (4, 42345), (2, 38513), (5, 26597), (6, 17111), (7, 14399),
+# (8, 9966), (9, 6428), (10, 3528), (11, 1873), (12, 1053), (13, 567), (14, 177),
+# (15, 70), (16, 22), (17, 12), (18, 1), (20, 1)]
+fdist.max()
+# 3
+fdist[3]
+# 50223
+fdist.freq(3)
+# 0.19255882431878046
