@@ -95,3 +95,7 @@ for i in long_words:
     print("RESULT ",str(i),"\n")
     print(text4.concordance(i))
     print("_______________________________________________________")
+
+#frequent & lengthy words
+fdist5 = FreqDist(text5)
+sorted(word for word in set(text5) if len(word) > 7 and fdist5[word] > 7)
