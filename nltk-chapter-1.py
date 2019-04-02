@@ -104,3 +104,7 @@ for i in array:
     print("RESULT ",str(i),"\n")
     print(text5.concordance(i))
     print("_______________________________________________________")
+
+#show word pairs
+list(bigrams(['more', 'is', 'said', 'than', 'done']))
+#returns: [('more', 'is'), ('is', 'said'), ('said', 'than'), ('than', 'done')]
