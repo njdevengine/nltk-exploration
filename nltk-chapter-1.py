@@ -136,3 +136,34 @@ fdist[3]
 # 50223
 fdist.freq(3)
 # 0.19255882431878046
+
+## Functions Defined for NLTK's Frequency Distributions
+
+# Example	                    Description
+# fdist = FreqDist(samples)	    create a frequency distribution containing the given samples
+# fdist[sample] += 1	        increment the count for this sample
+# fdist['monstrous']	        count of the number of times a given sample occurred
+# fdist.freq('monstrous')	    frequency of a given sample
+# fdist.N()	                    total number of samples
+# fdist.most_common(n)	        the n most common samples and their frequencies
+# for sample in fdist:	        iterate over the samples
+# fdist.max()	                sample with the greatest count
+# fdist.tabulate()	            tabulate the frequency distribution
+# fdist.plot()	                graphical plot of the frequency distribution
+# fdist.plot(cumulative=True)	cumulative plot of the frequency distribution
+# fdist1 |= fdist2	            update fdist1 with counts from fdist2
+# fdist1 < fdist2	            test if samples in fdist1 occur less frequently than in fdist2
+
+
+#### Word Comparison Operators ####
+
+# Function	        Meaning
+# s.startswith(t)	test if s starts with t
+# s.endswith(t)	    test if s ends with t
+# t in s	        test if t is a substring of s
+# s.islower()	    test if s contains cased characters and all are lowercase
+# s.isupper()	    test if s contains cased characters and all are uppercase
+# s.isalpha()	    test if s is non-empty and all characters in s are alphabetic
+# s.isalnum()	    test if s is non-empty and all characters in s are alphanumeric
+# s.isdigit()	    test if s is non-empty and all characters in s are digits
+# s.istitle()	    test if s contains cased characters and is titlecased (i.e. all words in s have initial capitals)
