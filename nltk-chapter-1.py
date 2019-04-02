@@ -108,3 +108,16 @@ for i in array:
 #show word pairs
 list(bigrams(['more', 'is', 'said', 'than', 'done']))
 #returns: [('more', 'is'), ('is', 'said'), ('said', 'than'), ('than', 'done')]
+
+#A collocation is a sequence of words that occur together unusually often. like: red wine (ie.phrases)
+text1.collocations()
+# Sperm Whale; Moby Dick; White Whale; old man; Captain Ahab; sperm
+# whale; Right Whale; Captain Peleg; New Bedford; Cape Horn; cried Ahab;
+# years ago; lower jaw; never mind; Father Mapple; cried Stubb; chief
+# mate; white whale; ivory leg; one hand
+
+#find 10  most common word lengths in a text:
+fdist = FreqDist(len(w) for w in text1)
+fdist
+# FreqDist({3: 50223, 1: 47933, 4: 42345, 2: 38513, 5: 26597, 6: 17111, 7: 14399,
+#   8: 9966, 9: 6428, 10: 3528, ...})
