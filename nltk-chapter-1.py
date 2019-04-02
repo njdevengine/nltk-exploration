@@ -1,11 +1,9 @@
 import nltk
-
 # opens download navigator, just download book
 nltk.download()
-
 from nltk.book import *
 
-#contextual use of the word.
+#contextual use of the word. Limit 25, shows total # as well.
 text1.concordance("monstrous")
 
 #words used in a similar manner to the word.
@@ -22,3 +20,4 @@ import matplotlib
 import numpy
 #creates a graphical representation of where words appear, plots in a matplotlib chart.
 text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "America"])
+#http://www.nltk.org/images/inaugural.png
