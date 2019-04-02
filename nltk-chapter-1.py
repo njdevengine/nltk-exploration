@@ -98,4 +98,9 @@ for i in long_words:
 
 #frequent & lengthy words
 fdist5 = FreqDist(text5)
-sorted(word for word in set(text5) if len(word) > 7 and fdist5[word] > 7)
+array = sorted(word for word in set(text5) if len(word) > 7 and fdist5[word] > 7)
+#and their context
+for i in array:
+    print("RESULT ",str(i),"\n")
+    print(text5.concordance(i))
+    print("_______________________________________________________")
