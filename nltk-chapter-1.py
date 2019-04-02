@@ -47,3 +47,13 @@ text3.count("smote")
 100 * text4.count('a') / len(text4)
 # returns: 1.4643016433938312
 
+#functions built to simplify the above
+def lexical_diversity(text):
+    return len(set(text)) / len(text)
+
+def percentage(count, total):
+    return 100 * count / total
+
+lexical_diversity(text3)
+percentage(text4.count('a'), len(text4))
+
