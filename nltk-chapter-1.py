@@ -70,3 +70,15 @@ fdist1.most_common(50)
 # [(',', 18713), ('the', 13721), ('.', 6862), ('of', 6536), ('and', 6024),
 # ('a', 4569), ('to', 4542), (';', 4072), ('in', 3916), ('that', 2982),
 # ("'", 2684), ('-', 2552), ('his', 2459), ('it', 2209), ('I', 2124)...]
+
+#most of these words are useless, connector words etc. they account for a large portion of the text
+fdist1.plot(50, cumulative=True)
+#single use one time only words
+fdist1.hapaxes()
+
+#print the context of hapaxes (single use words)
+array = fdist1.hapaxes()[:25]
+for i in array:
+    print("RESULT ",str(i),"\n")
+    print(text2.concordance(i))
+    print("_______________________________________________________")
