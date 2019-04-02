@@ -82,3 +82,11 @@ for i in array:
     print("RESULT ",str(i),"\n")
     print(text2.concordance(i))
     print("_______________________________________________________")
+    
+#view the long words
+my_set = set(text4)
+long_words = [word for word in my_set if len(word) > 15]
+sorted(long_words)
+
+for i in long_words:
+    print(i+ " " + str(len(i)))
