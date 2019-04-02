@@ -63,3 +63,10 @@ percentage(text4.count('a'), len(text4))
 text3.index("the")
 #find the word at an index
 text3[100]
+
+#most common words in a text
+fdist1 = FreqDist(text1)
+fdist1.most_common(50)
+# [(',', 18713), ('the', 13721), ('.', 6862), ('of', 6536), ('and', 6024),
+# ('a', 4569), ('to', 4542), (';', 4072), ('in', 3916), ('that', 2982),
+# ("'", 2684), ('-', 2552), ('his', 2459), ('it', 2209), ('I', 2124)...]
