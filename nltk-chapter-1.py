@@ -57,3 +57,7 @@ def percentage(count, total):
 lexical_diversity(text3)
 percentage(text4.count('a'), len(text4))
 
+#return the index of a word
+text3.index("the")
+#find the word at an index
+text3[100]
