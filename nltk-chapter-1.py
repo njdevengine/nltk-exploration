@@ -90,3 +90,8 @@ sorted(long_words)
 
 for i in long_words:
     print(i+ " " + str(len(i)))
+#view their context
+for i in long_words:
+    print("RESULT ",str(i),"\n")
+    print(text4.concordance(i))
+    print("_______________________________________________________")
