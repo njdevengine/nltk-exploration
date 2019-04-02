@@ -3,6 +3,12 @@ import nltk
 nltk.download()
 from nltk.book import *
 
+#for your own viewing of raw text
+moby=[]
+for i in text1:
+    moby.append(i)
+moby = " ".join(moby)
+
 #contextual use of the word. Limit 25, shows total # as well.
 text1.concordance("monstrous")
 
