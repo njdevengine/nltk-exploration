@@ -34,6 +34,8 @@ sorted(set(text3))
 # 'A', 'Abel', 'Abelmizraim', 'Abidah', 'Abide', 'Abimael', 'Abimelech',
 # 'Abr', 'Abrah', 'Abraham', 'Abram', 'Accad', 'Achbor', 'Adah', ...]
 
+#NOTE: Capitalized letters come first ie: @,1,A,Z,Za,apple,zebra
+
 len(set(text3))
 #returns the number of unique (distinct words) word types / (punctuation) tokens
 
