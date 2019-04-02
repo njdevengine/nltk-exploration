@@ -172,3 +172,18 @@ sorted(w for w in set(text7) if '-' in w and 'index' in w)
 sorted(wd for wd in set(text3) if wd.istitle() and len(wd) > 10)
 sorted(w for w in set(sent7) if not w.islower())
 sorted(t for t in set(text2) if 'cie' in t or 'cei' in t)
+
+[len(w) for w in text1]
+# returns: [1, 4, 4, 2, 6, 8, 4, 1, 9, 1, 1, 8, 2, 1, 4, 11, 5, 2, 1, 7, 6, 1, 3, 4, 5, 2, ...]
+[w.upper() for w in text1]
+# returns: ['[', 'MOBY', 'DICK', 'BY', 'HERMAN', 'MELVILLE', '1851', ']', 'ETYMOLOGY', '.', ...]
+
+#########TEXT CLEANUP
+len(text1)
+# 260819
+len(set(text1))
+# 19317
+len(set(word.lower() for word in text1))
+# 17231
+len(set(word.lower() for word in text1 if word.isalpha()))
+# 16948
