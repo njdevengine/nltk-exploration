@@ -167,3 +167,8 @@ fdist.freq(3)
 # s.isalnum()	    test if s is non-empty and all characters in s are alphanumeric
 # s.isdigit()	    test if s is non-empty and all characters in s are digits
 # s.istitle()	    test if s contains cased characters and is titlecased (i.e. all words in s have initial capitals)
+
+sorted(w for w in set(text7) if '-' in w and 'index' in w)
+sorted(wd for wd in set(text3) if wd.istitle() and len(wd) > 10)
+sorted(w for w in set(sent7) if not w.islower())
+sorted(t for t in set(text2) if 'cie' in t or 'cei' in t)
