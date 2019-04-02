@@ -1,3 +1,5 @@
+#http://www.nltk.org/book/ch01.html
+
 import nltk
 # opens download navigator, just download book
 nltk.download()
