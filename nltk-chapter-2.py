@@ -58,6 +58,7 @@ chatroom = nps_chat.posts('10-19-20s_706posts.xml')
 chatroom[123]
 # ['i', 'do', "n't", 'want', 'hot', 'pics', 'of', 'a', 'female', ',',
 # 'I', 'can', 'look', 'in', 'a', 'mirror', '.']
+[print(i) for i in chatroom]
 
 #brown corpus, writings of all genres from 1960
 from nltk.corpus import brown
@@ -79,3 +80,22 @@ fdist = nltk.FreqDist(w.lower() for w in news_text)
 modals = ['can', 'could', 'may', 'might', 'must', 'will']
 for m in modals:
     print(m + ':', fdist[m], end=' ')
+
+#frequency distribution of words in brown genres
+
+cfd = nltk.ConditionalFreqDist(
+          (genre, word)
+          for genre in brown.categories()
+          for word in brown.words(categories=genre))
+genres = ['news', 'religion', 'hobbies', 'science_fiction', 'romance', 'humor']
+modals = ['can', 'could', 'may', 'might', 'must', 'will']
+cfd.tabulate(conditions=genres, samples=modals)
+
+#                  can could  may might must will
+#            news   93   86   66   38   50  389
+#        religion   82   59   78   12   54   71
+#         hobbies  268   58  131   22   83  264
+# science_fiction   16   49    4   12    8   16
+#         romance   74  193   11   51   45   43
+#           humor   16   30    8    8    9   13
+
