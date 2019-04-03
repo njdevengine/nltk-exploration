@@ -187,3 +187,6 @@ len(set(word.lower() for word in text1))
 # 17231
 len(set(word.lower() for word in text1 if word.isalpha()))
 # 16948
+
+# filter results
+filtered_array = sorted(set(word.lower() for word in text1 if word.isalpha() and len(word)>3))
