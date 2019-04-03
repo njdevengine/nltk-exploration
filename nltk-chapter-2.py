@@ -99,3 +99,93 @@ cfd.tabulate(conditions=genres, samples=modals)
 #         romance   74  193   11   51   45   43
 #           humor   16   30    8    8    9   13
 
+##### THE CORPUS LIST ####
+# Brown Corpus                                15 genres, 1.15M words, tagged, categorized
+# CESS Treebanks                              1M words, tagged and parsed (Catalan, Spanish)
+# Chat-80 Data Files                          World Geographic Database
+# CMU Pronouncing Dictionary                  127k entries
+# CoNLL 2000 Chunking Data                    270k words, tagged and chunked
+# CoNLL 2002 Named Entity                     700k words, pos- and named-entity-tagged (Dutch, Spanish)
+# CoNLL 2007 Dependency Treebanks (sel)       150k words, dependency parsed (Basque, Catalan)
+# Dependency Treebank                         Dependency parsed version of Penn Treebank sample
+# FrameNet                                    10k word senses, 170k manually annotated sentences
+# Floresta Treebank                           9k sentences, tagged and parsed (Portuguese)
+# Gazetteer Lists                             Lists of cities and countries
+# Genesis Corpus                              6 texts, 200k words, 6 languages
+# Gutenberg (selections)                      18 texts, 2M words
+# Inaugural Address Corpus                    US Presidential Inaugural Addresses (1789-present)
+# Indian POS-Tagged Corpus                    60k words, tagged (Bangla, Hindi, Marathi, Telugu)
+# MacMorpho Corpus                            1M words, tagged (Brazilian Portuguese)
+# Movie Reviews                               2k movie reviews with sentiment polarity classification
+# Names Corpus                                8k male and female names
+# NIST 1999 Info Extr (selections)            63k words, newswire and named-entity SGML markup
+# Nombank                                     115k propositions, 1400 noun frames
+# NPS Chat Corpus                             10k IM chat posts, POS-tagged and dialogue-act tagged
+# Open Multilingual WordNet                   15 languages, aligned to English WordNet
+# PP Attachment Corpus                        28k prepositional phrases, tagged as noun or verb modifiers
+# Proposition Bank                            113k propositions, 3300 verb frames
+# Question Classification                     6k questions, categorized
+# Reuters Corpus                              1.3M words, 10k news documents, categorized
+# Roget's Thesaurus                           200k words, formatted text
+# RTE Textual Entailment                      8k sentence pairs, categorized
+# SEMCOR                                      880k words, part-of-speech and sense tagged
+# Senseval 2 Corpus                           600k words, part-of-speech and sense tagged
+# SentiWordNet                                sentiment scores for 145k WordNet synonym sets
+# Shakespeare texts (selections)              8 books in XML format
+# State of the Union Corpus                   485k words, formatted text
+# Stopwords Corpus                            2,400 stopwords for 11 languages
+# Swadesh Corpus                              comparative wordlists in 24 languages
+# Switchboard Corpus (selections)             36 phonecalls, transcribed, parsed
+# Univ Decl of Human Rights                   480k words, 300+ languages
+# Penn Treebank (selections)                  40k words, tagged and parsed
+# TIMIT Corpus (selections)                   audio files and transcripts for 16 speakers
+# VerbNet 2.1                                 5k verbs, hierarchically organized, linked to WordNet
+# Wordlist Corpus                             960k words and 20k affixes for 8 languages
+# WordNet 3.0 (English)                       145k synonym sets
+
+dict = {"Brown Corpus":"15 genres, 1.15M words, tagged, categorized",
+"CESS Treebanks":"1M words, tagged and parsed (Catalan, Spanish)",
+"Chat-80 Data Files":"World Geographic Database",
+"CMU Pronouncing Dictionary":"127k entries",
+"CoNLL 2000 Chunking Data":"270k words, tagged and chunked",
+"CoNLL 2002 Named Entity":"700k words, pos- and named-entity-tagged (Dutch, Spanish)",
+"CoNLL 2007 Dependency Treebanks (sel)":"150k words, dependency parsed (Basque, Catalan)",
+"Dependency Treebank":"Dependency parsed version of Penn Treebank sample",
+"FrameNet":"10k word senses, 170k manually annotated sentences",
+"Floresta Treebank":"9k sentences, tagged and parsed (Portuguese)",
+"Gazetteer Lists":"Lists of cities and countries",
+"Genesis Corpus":"6 texts, 200k words, 6 languages",
+"Gutenberg (selections)":"18 texts, 2M words",
+"Inaugural Address Corpus":"US Presidential Inaugural Addresses (1789-present)",
+"Indian POS-Tagged Corpus":"60k words, tagged (Bangla, Hindi, Marathi, Telugu)",
+"MacMorpho Corpus":"1M words, tagged (Brazilian Portuguese)",
+"Movie Reviews":"2k movie reviews with sentiment polarity classification",
+"Names Corpus":"8k male and female names",
+"NIST 1999 Info Extr (selections)":"63k words, newswire and named-entity SGML markup",
+"Nombank":"115k propositions, 1400 noun frames",
+"NPS Chat Corpus":"10k IM chat posts, POS-tagged and dialogue-act tagged",
+"Open Multilingual WordNet":"15 languages, aligned to English WordNet",
+"PP Attachment Corpus":"28k prepositional phrases, tagged as noun or verb modifiers",
+"Proposition Bank":"113k propositions, 3300 verb frames",
+"Question Classification":"6k questions, categorized",
+"Reuters Corpus":"1.3M words, 10k news documents, categorized",
+"Roget's Thesaurus":"200k words, formatted text",
+"RTE Textual Entailment":"8k sentence pairs, categorized",
+"SEMCOR":"880k words, part-of-speech and sense tagged",
+"Senseval 2 Corpus":"600k words, part-of-speech and sense tagged",
+"SentiWordNet":"sentiment scores for 145k WordNet synonym sets",
+"Shakespeare texts (selections)":"8 books in XML format",
+"State of the Union Corpus":"485k words, formatted text",
+"Stopwords Corpus":"2,400 stopwords for 11 languages",
+"Swadesh Corpus":"comparative wordlists in 24 languages",
+"Switchboard Corpus (selections)":"36 phonecalls, transcribed, parsed",
+"Univ Decl of Human Rights":"480k words, 300+ languages",
+"Penn Treebank (selections)":"40k words, tagged and parsed",
+"TIMIT Corpus (selections)":"audio files and transcripts for 16 speakers",
+"VerbNet 2.1":"5k verbs, hierarchically organized, linked to WordNet",
+"Wordlist Corpus":"960k words and 20k affixes for 8 languages",
+"WordNet 3.0 (English)":"145k synonym sets"}
+
+import pandas as pd
+corpus = pd.DataFrame(dict.items(), columns=['Corpus', 'Description'])
+corpus
