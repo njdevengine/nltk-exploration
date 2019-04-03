@@ -16,3 +16,5 @@ tokens[:10]
 
 #convert to nltk Text object
 text = nltk.Text(tokens)
+#top bigrams in the text
+text.collocations()
