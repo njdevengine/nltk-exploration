@@ -30,7 +30,7 @@ for fileid in gutenberg.fileids():
 # 4 20 13 carroll-alice.txt
 # 5 20 12 chesterton-ball.txt
 
-#display sentences for macbeth
+#display sentences for macbeth *there is also words(), raw(), and sents()
 macbeth_sentences = gutenberg.sents('shakespeare-macbeth.txt')
 macbeth_sentences
 macbeth_sentences[1116]
@@ -38,3 +38,16 @@ macbeth_sentences[1116]
 #find longest sentence
 longest_len = max(len(s) for s in macbeth_sentences)
 [s for s in macbeth_sentences if len(s) == longest_len]
+
+#shows other text types contained in nltk
+from nltk.corpus import webtext
+for fileid in webtext.fileids():
+    print(fileid, webtext.raw(fileid)[:65], '...')
+# firefox.txt Cookie Manager: "Don't allow sites that set removed cookies to se ...
+# grail.txt SCENE 1: [wind] [clop clop clop] 
+# KING ARTHUR: Whoa there!  [clop ...
+# overheard.txt White guy: So, do you have any plans for this evening?
+# Asian girl ...
+# pirates.txt PIRATES OF THE CARRIBEAN: DEAD MAN'S CHEST, by Ted Elliott & Terr ...
+# singles.txt 25 SEXY MALE, seeks attrac older single lady, for discreet encoun ...
+# wine.txt Lovely delicate, fragrant Rhone wine. Polished leather and strawb ...
