@@ -29,3 +29,12 @@ for fileid in gutenberg.fileids():
 # 4 18 12 burgess-busterbrown.txt
 # 4 20 13 carroll-alice.txt
 # 5 20 12 chesterton-ball.txt
+
+#display sentences for macbeth
+macbeth_sentences = gutenberg.sents('shakespeare-macbeth.txt')
+macbeth_sentences
+macbeth_sentences[1116]
+
+#find longest sentence
+longest_len = max(len(s) for s in macbeth_sentences)
+[s for s in macbeth_sentences if len(s) == longest_len]
