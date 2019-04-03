@@ -1,4 +1,5 @@
 import nltk
+from nltk.corpus import gutenberg
 
 #import large body of  text from project gutenberg (books)
 #nltk.corpus.gutenberg.fileids()
@@ -9,7 +10,6 @@ emma = nltk.Text(nltk.corpus.gutenberg.words('austen-emma.txt'))
 #contextual use of word surprize:
 emma.concordance("surprize")
 
-from nltk.corpus import gutenberg
 gutenberg.fileids()
 # returns: ['austen-emma.txt', 'austen-persuasion.txt', 'austen-sense.txt', ...]
 
@@ -191,3 +191,19 @@ corpus = pd.DataFrame(dict.items(), columns=['Corpus', 'Description'])
 corpus
 
 #full list of corpi and their names at: http://www.nltk.org/nltk_data/
+
+#stopwords are verbal plumbing not necessary to extract meaning wholesale from text.
+from nltk.corpus import stopwords
+stopwords.words('english')
+# ['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours',
+# 'yourself', 'yourselves', 'he', 'him', 'his', 'himself', 'she', 'her', 'hers',
+# 'herself', 'it', 'its', 'itself', 'they', 'them', 'their', 'theirs', 'themselves',
+# 'what', 'which', 'who', 'whom', 'this', 'that', 'these', 'those', 'am', 'is', 'are',
+# 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'having', 'do', 'does',
+# 'did', 'doing', 'a', 'an', 'the', 'and', 'but', 'if', 'or', 'because', 'as', 'until',
+# 'while', 'of', 'at', 'by', 'for', 'with', 'about', 'against', 'between', 'into',
+# 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down',
+# 'in', 'out', 'on', 'off', 'over', 'under', 'again', 'further', 'then', 'once', 'here',
+# 'there', 'when', 'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few', 'more',
+# 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so',
+# 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should', 'now']
