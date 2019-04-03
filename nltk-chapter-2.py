@@ -51,3 +51,31 @@ for fileid in webtext.fileids():
 # pirates.txt PIRATES OF THE CARRIBEAN: DEAD MAN'S CHEST, by Ted Elliott & Terr ...
 # singles.txt 25 SEXY MALE, seeks attrac older single lady, for discreet encoun ...
 # wine.txt Lovely delicate, fragrant Rhone wine. Polished leather and strawb ...
+
+# chatroom logs
+from nltk.corpus import nps_chat
+chatroom = nps_chat.posts('10-19-20s_706posts.xml')
+chatroom[123]
+# ['i', 'do', "n't", 'want', 'hot', 'pics', 'of', 'a', 'female', ',',
+# 'I', 'can', 'look', 'in', 'a', 'mirror', '.']
+
+#brown corpus, writings of all genres from 1960
+from nltk.corpus import brown
+brown.categories()
+# ['adventure', 'belles_lettres', 'editorial', 'fiction', 'government', 'hobbies',
+# 'humor', 'learned', 'lore', 'mystery', 'news', 'religion', 'reviews', 'romance',
+# 'science_fiction']
+brown.words(categories='news')
+# ['The', 'Fulton', 'County', 'Grand', 'Jury', 'said', ...]
+brown.words(fileids=['cg22'])
+# ['Does', 'our', 'society', 'have', 'a', 'runaway', ',', ...]
+brown.sents(categories=['news', 'editorial', 'reviews'])
+# [['The', 'Fulton', 'County'...], ['The', 'jury', 'further'...], ...]
+
+#compare genres for their use of modal verbs
+from nltk.corpus import brown
+news_text = brown.words(categories='news')
+fdist = nltk.FreqDist(w.lower() for w in news_text)
+modals = ['can', 'could', 'may', 'might', 'must', 'will']
+for m in modals:
+    print(m + ':', fdist[m], end=' ')
