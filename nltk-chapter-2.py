@@ -189,3 +189,5 @@ dict = {"Brown Corpus":"15 genres, 1.15M words, tagged, categorized",
 import pandas as pd
 corpus = pd.DataFrame(dict.items(), columns=['Corpus', 'Description'])
 corpus
+
+#full list of corpi and their names at: http://www.nltk.org/nltk_data/
